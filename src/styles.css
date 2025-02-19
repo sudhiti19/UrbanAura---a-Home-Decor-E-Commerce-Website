@@ -1,0 +1,379 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Playfair+Display:ital,wght@0,500;0,900;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+.main{
+   background-color: #FCF5EC;
+}
+body{
+    background-color: #FCF5EC;
+}
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures space between name & navbar */
+    padding: 10px 40px;
+    z-index: 1000;
+    background: transparent;
+    position: relative;
+    min-height: 80px;
+    top: 10px;
+}
+
+.name {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Centers it */
+    white-space: nowrap; /* Prevents wrapping */
+}
+
+.navbar {
+    display: flex;
+    gap: 30px;
+    margin-left: auto; /* Pushes navbar to the right */
+}
+
+.navbar a {
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+}
+
+
+
+.navbar a:hover{
+    color: #FEFAE0;
+}
+.image-container {
+    text-align: center;
+    margin-top: -270px; 
+    height: 130vh;
+    /* Adjust as needed */
+    overflow: hidden;
+    justify-content: center;
+  }
+  .image-container img {
+    max-width: 100%;
+    height: 100%; /* Maintain aspect ratio */
+    object-fit: cover;
+  }
+  .search-bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 80px;
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+}
+
+.search-bar input {
+    color: #37472b;
+    width: 450px;
+    height: 60px;
+    background: transparent;
+    border: 0;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: normal; /* Reset to avoid conflicts */
+    padding: 0 20px; /* Only left and right padding */
+    box-sizing: border-box; /* Ensures padding doesn’t affect height */
+}
+
+  .search-bar ::placeholder{
+    font-size: 20px;
+    justify-content: center;
+  }
+  .search-button {
+    position: absolute;
+    top: 50%;
+    right: -20px; /* Adjust horizontal alignment */
+    transform: translateY(-50%);
+    margin-right: 20px;
+    outline: none;
+    font-size: 45px;
+   align-items:end;
+   cursor: pointer;
+   background: none;
+   border: none;
+  }
+  .search-button svg {
+    fill: #37472b !important;  /* Changes SVG color */
+    color: #37472b !important; /* Ensures it's applied */
+    font-size: 28px !important; /* Adjusts size */
+}
+
+
+  
+  .search-bar input:focus {
+    font-size: 20px; /* Adjust the font size as needed */
+  }
+  .search-bar button{
+    margin-right: 65px;
+  }
+.shop{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    font-size: 30px;
+    margin-top: 15px;
+}
+.decor-item h2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: #37472b;
+}
+
+.decor-item img{
+    transition: transform 0.3s ease;
+}
+.decor-item img:hover{
+    transform: scale(1.05);
+}
+
+.frame{
+    width: 300px;
+    height: 350px;
+    
+}
+.candle{
+    width: 300px;
+    height: 350px;
+    /*margin-left:30px ;*/
+}   
+
+.clock{
+    width: 300px;
+    height: 350px;
+    /*margin-left:30px ;*/
+}
+.plant{
+    width: 300px;
+    height: 350px;
+    /*margin-left:30px ;*/
+}
+.vase{
+    width: 300px;
+    height: 350px;
+    /*margin-left:30px ;*/
+}
+.shelf{
+    width: 300px;
+    height: 350px;
+    /*margin-left:30px ;*/
+}
+.mirror{
+    width: 300px;
+    height: 350px;
+    /*margin-left:30px ;*/
+}
+.show{
+    width: 300px;
+    height: 350px;
+    /*margin-left:30px ;*/
+}
+.shop-categories{
+    width: 100%;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+    justify-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+/* Section to add spacing */
+.categories-section {
+    text-align: center;
+    margin-top: 35px;
+}
+
+/* Styling for the heading */
+.categories-heading {
+    font-size: 38px;
+    font-weight: 500;
+    color: #37472b;
+    margin-bottom: 18px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Container to make table full width and add border radius */
+.categories-table-container {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+/* Table styling */
+.categories-table {
+    width: 95%;
+    max-width: 1800px;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #FCF5EC;
+    border-radius: 20px;
+    border: 1px solid #37472b;
+    overflow: hidden; /* Ensures curved corners */
+    
+}
+
+/* Styling for each cell */
+.category-cell {
+    text-align: center;
+    padding: 30px;
+    border: 1px solid #37472b;
+}
+
+/* Clickable category box */
+.category-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+/* Image styling */
+.category-img {
+    width: 200px; /* Set fixed width */
+    height: 200px; /* Set fixed height */
+    object-fit: cover; /* Ensures uniform size */
+}
+
+/* Category name */
+.category-name {
+    font-size: 20px;
+    color: #37472b;
+    font-family: 'Playfair Display', serif;
+    margin-top: 15px;
+}
+
+/* Hover effect */
+.category-link:hover {
+    transform: scale(1.05);
+}
+/* Container for customer reviews */
+/* Container for customer reviews */
+/* Container for reviews */
+/* Outer box to match categories table */
+.reviews-section {
+    width: 93%;
+    max-width: 1800px;
+    background-color: #37472b;
+    border-radius: 20px;
+    border: 1.5px solid #37472b;
+    padding: 30px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Heading style */
+.reviews-heading {
+    font-size: 38px;
+    color: #FCF5EC;
+    font-weight: 500;
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Container for the reviews */
+.reviews-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Individual review card */
+.review-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 30%;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Customer info section */
+.customer-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Customer image */
+.customer-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Customer name */
+.customer-name {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    color: #333;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Customer location */
+.customer-location {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Star rating */
+.star-rating {
+    color: #37472b;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Review heading */
+.review-heading {
+    font-size: 20px;
+    color: #333;
+    font-weight: 500;
+    
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+}
+
+/* Review text */
+.review-text {
+    font-size: 14px;
+    color: #555;
+    font-family: 'Playfair Display', serif;
+    line-height: 1.6; 
+}
+
+
+

@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/Header";
+import SearchBar from "./components/SearchBar";
+import Categories from "./components/Categories";
+import Reviews from "./components/CustomerReviews";
+import "./styles.css";
+import notbg from "./assets/notbg.jpg";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="main">
+      <Header />
+      <div className="image-container">
+      <img src={notbg} alt="decor" />
+
+        <SearchBar />
+      </div>
+      <Categories />
+      <Reviews/>
+    </main>
   );
 }
 

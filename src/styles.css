@@ -307,11 +307,11 @@ body{
 
 /* Individual review card */
 .review-card {
-    background-color: white;
+    background-color: #FCF5EC;
     padding: 20px;
     border-radius: 20px;
     width: 30%;
-    border: 1px solid #ddd;
+    border: 1px solid #FCF5EC;
     text-align: left;
 }
 
@@ -375,5 +375,122 @@ body{
     line-height: 1.6; 
 }
 
+/* Newsletter Section */
+/* Newsletter Section */
+.newsletter-container {
+    width: 93%;
+    max-width: 1800px;
+    min-height: 450px; /* Increased height */
+    background-color: #997C70;
+    border-radius: 20px;
+    border: 1.5px solid #997C70;
+    padding: 50px 30px; /* More vertical padding */
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #FCF5EC;
+    font-family: 'Playfair Display', serif;
+}
 
+/* Left side of the newsletter (Reduced width) */
+.newsletter-left {
+    flex: 0.8; /* Decreased width */
+    text-align: left;
+    padding-right: 30px;
+    color: #37472b;
+}
 
+/* Right side with longer vertical line */
+.newsletter-right {
+    flex: 1;
+    padding-left: 30px;
+    border-left: 1px solid #FCF5EC; /* Thicker line */
+    color: #FCF5EC;
+    min-height: 350px; /* Extends line fully */
+}
+
+/* Newsletter heading */
+.newsletter-heading {
+    font-size: 39px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #FCF5EC;
+}
+
+/* Email input box */
+.newsletter-input-box {
+    display: flex;
+    position: relative;
+    width: 100%;
+    font-family: 'Playfair Display', serif;
+    color: #FCF5EC;
+    margin-bottom: 100px; /* Space between input and text below */
+}
+
+.newsletter-input-box input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #FCF5EC;
+    width: 70%; /* Keep width the same */
+    color: #FCF5EC;
+    background-color: #997C70;
+    padding-right: 50px; /* Space for button */
+}
+
+/* Placeholder text color (matches border color) */
+.newsletter-input-box input::placeholder {
+    color: #FCF5EC;
+    opacity: 0.8;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Arrow button inside input box */
+.newsletter-button {
+    position: absolute;
+    bottom: -20px;
+    right: 180px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    font-size: 22px;
+    cursor: pointer;
+    color: #FCF5EC;
+}
+
+/* Footer links */
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-links h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #FCF5EC;
+}
+
+.footer-links p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #FCF5EC;
+}
+
+/* Social icons */
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Footer text */
+.footer-text {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 20px;
+    color: #FCF5EC;
+}

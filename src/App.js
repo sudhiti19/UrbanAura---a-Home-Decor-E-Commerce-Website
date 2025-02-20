@@ -5,7 +5,7 @@ import Categories from "./components/Categories";
 import Reviews from "./components/CustomerReviews";
 import "./styles.css";
 import notbg from "./assets/notbg.jpg";
-
+import Newsletter from "./components/Newsletter";
 function App() {
   return (
     <main className="main">
@@ -17,6 +17,7 @@ function App() {
       </div>
       <Categories />
       <Reviews/>
+      <Newsletter/>
     </main>
   );
 }

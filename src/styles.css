@@ -378,21 +378,39 @@ body{
 /* Newsletter Section */
 /* Newsletter Section */
 .newsletter-container {
-    width: 93%;
+    width: 100%;
     max-width: 1800px;
-    min-height: 450px; /* Increased height */
-    background-color: #997C70;
-    border-radius: 20px;
-    border: 1.5px solid #997C70;
-    padding: 50px 30px; /* More vertical padding */
-    margin: auto;
+    min-height: 400px;
+    position: relative; /* Needed for overlay */
+    border-radius: 0;
+    border: 0;
+    padding: 50px 30px;
+    margin: 0;
     margin-top: 40px;
-    margin-bottom: 40px;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: #FCF5EC;
     font-family: 'Playfair Display', serif;
+    background: url('C:\Users\sanja\Desktop\decor\decor-app\src\assets\brown.webp') no-repeat center center/cover;
+}
+
+.newsletter-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    border-radius: 0;
+}
+
+/* Ensure content is above overlay */
+.newsletter-container > * {
+    position: relative;
+    z-index: 1;
 }
 
 /* Left side of the newsletter (Reduced width) */
@@ -407,10 +425,26 @@ body{
 .newsletter-right {
     flex: 1;
     padding-left: 30px;
-    border-left: 1px solid #FCF5EC; /* Thicker line */
+    padding-right: 30px;
+     /* Existing vertical line */
     color: #FCF5EC;
-    min-height: 350px; /* Extends line fully */
+    
+    position: relative; /* Required for absolute positioning */
+    margin-left: 100px;
+
+    /* Add horizontal line */
 }
+
+.newsletter-right::before {
+    content: "";
+    position: absolute;
+    top: -75px; /* Move upwards */
+    left: 0;
+    width: 1px;
+    height: 150%; /* Extend beyond the container */
+    background-color: #FCF5EC; /* Match the original border color */
+}
+
 
 /* Newsletter heading */
 .newsletter-heading {
@@ -461,6 +495,22 @@ body{
     cursor: pointer;
     color: #FCF5EC;
 }
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Ensures left and right alignment */
+    align-items: center;
+    width: 100%;
+    border-top: 1px solid #FCF5EC; /* Adds horizontal line */
+    padding-top: 10px; /* Push content below line */
+    margin-top: 15px; /* Adds spacing from newsletter */
+}
+
+
+
+
+
+
+
 
 /* Footer links */
 .footer-links {
@@ -469,14 +519,21 @@ body{
 }
 
 .footer-links h4 {
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 80px;
     color: #FCF5EC;
+    margin-bottom: 19px;
 }
-
+.footer-tp {
+    display: flex;
+    gap: 15px; /* Space between "Terms" and "Privacy" */
+    font-size: 14px;
+    color: #FCF5EC;
+    cursor: pointer;
+}
 .footer-links p {
     font-size: 14px;
-    margin: 5px 0;
+    margin: 8px 0;
     color: #FCF5EC;
 }
 
@@ -484,13 +541,37 @@ body{
 .social-icons {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 190px;
+    font-size: 15px;
+    gap: 20px;
+}
+.social-item {
+    display: flex;
+    align-items: center; /* Align icon and text */
+    gap: 8px; /* Space between icon and text */
+    font-size: 14px;
+    color: #FCF5EC;
+    padding: 0;
+}
+.icon-fix {
+    display: block;
+    margin: 0;
+    padding: 0;
+    line-height: 1; /* Ensures no extra spacing */
+}
+.social-item svg {
+    position: relative;
+    top: 3px; /* Moves the icon downward */
+    padding: 0;
 }
 
 /* Footer text */
 .footer-text {
-    font-size: 12px;
-    text-align: center;
-    margin-top: 20px;
+    font-size: 14px;
     color: #FCF5EC;
+}
+.newsletter-text {
+    font-size: 12px; /* Decrease font size */
+    color: #FCF5EC; /* Slightly lighter shade to match the theme */
+    margin-top: 10px; /* Add spacing between input and text */
 }

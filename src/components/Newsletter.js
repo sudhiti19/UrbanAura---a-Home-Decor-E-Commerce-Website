@@ -1,22 +1,26 @@
 import React from "react";
 import "../styles.css";
-
+import { FaInstagram } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 const Newsletter = () => {
   return (
-    <div className="newsletter-container">
+    <footer className="newsletter-container">
+      {/* Left Section */}
       <div className="newsletter-left">
         <h2 className="newsletter-heading">
           Stay in the know by signing up to our newsletter!
         </h2>
         <div className="newsletter-input-box">
-          <input type="email" placeholder="E-Mail Address" />
-          <button className="newsletter-button">→</button>
+          <input type="email" placeholder="E-Mail Address" aria-label="Email Address" />
+          <button className="newsletter-button" aria-label="Subscribe">→</button>
         </div>
         <p className="newsletter-text">
           You can unsubscribe anytime. Check our privacy policy for more details.
         </p>
+        
       </div>
 
+      {/* Right Section */}
       <div className="newsletter-right">
         <div className="footer-links">
           <div>
@@ -38,13 +42,27 @@ const Newsletter = () => {
             <p>Custom Products</p>
           </div>
         </div>
+
+        {/* Social Media */}
         <div className="social-icons">
-          <span>📸 @houseoflocals</span>
-          <span>📧 contact@hol.com</span>
-        </div>
-        <p className="footer-text">© House of Locals 2023</p>
+  <div className="social-item">
+    <FaInstagram size={22} className="icon-fix" />
+    <span className="social-text">@urbanaura</span>
+  </div>
+  <div className="social-item">
+    <MdEmail size={20} className="icon-fix" />
+    <span className="social-text">contact@urbaura.com</span>
+  </div>
+</div>
       </div>
-    </div>
+
+      {/* Footer Bottom */}
+      
+      <div>
+  {/* Your existing content */}
+ 
+</div>
+    </footer>
   );
 };
 

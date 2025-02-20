@@ -6,6 +6,7 @@ import Reviews from "./components/CustomerReviews";
 import "./styles.css";
 import notbg from "./assets/notbg.jpg";
 import Newsletter from "./components/Newsletter";
+import Footer from "./components/Footer";
 function App() {
   return (
     <main className="main">
@@ -18,6 +19,7 @@ function App() {
       <Categories />
       <Reviews/>
       <Newsletter/>
+      <Footer/>
     </main>
   );
 }

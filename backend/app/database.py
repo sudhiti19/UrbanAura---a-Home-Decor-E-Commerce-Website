@@ -2,7 +2,9 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-DATABASE_URL = "postgresql://postgres:sudhiti@localhost:5432/decor_db"
+import os
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:sudhiti@localhost:5432/decor_db")
+
 
 
 engine = create_engine(DATABASE_URL)

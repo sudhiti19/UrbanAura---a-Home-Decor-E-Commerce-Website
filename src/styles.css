@@ -485,7 +485,7 @@ body{
     justify-content: space-between;
     color: #FCF5EC;
     font-family: 'Playfair Display', serif;
-    background: url('C:\Users\sanja\Desktop\decor\decor-app\src\assets\brown.webp') no-repeat center center/cover;
+    background: url('./assets/brown.webp') no-repeat center center/cover;
 }
 
 .newsletter-container::before {

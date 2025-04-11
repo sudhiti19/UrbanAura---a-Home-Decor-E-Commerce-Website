@@ -38,6 +38,10 @@ def get_db():
     finally:
         db.close()
 
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the UrbanAura API!"}
+
 @app.get("/login")
 def login_page():
     return {"message": "Login route (GET) not implemented. Use POST from frontend."}

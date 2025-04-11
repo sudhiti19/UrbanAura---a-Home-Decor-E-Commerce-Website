@@ -20,7 +20,7 @@ const Checkout = () => {
 
     try {
         const token = localStorage.getItem("token");
-        const response = await fetch("http://localhost:8000/orders/", {
+        const response = await fetch("https://ecommerce-backend-4d12.onrender.com/orders/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

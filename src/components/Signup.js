@@ -12,7 +12,7 @@ const Signup = () => {
     e.preventDefault();
   
     try {
-      const response = await fetch("https://ecommerce-backend-4d12.onrender.com/signup", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
